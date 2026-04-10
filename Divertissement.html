@@ -25,9 +25,62 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Voici mon Divertissement</h1>
-    </main>
+    <main class="divertissement-container">
+    <div class="header-section">
+        <h1>Mes Divertissement</h1>
+    </div>
+
+    <section class="bento-grid">
+        <article class="bento-item music-card zoomable">
+            <img src="image/Musique.jpg" alt="Musique">
+            <div class="bento-overlay">
+                <span class="card-badge">Playlist Favorite</span>
+                <h3>Rythmes & Beats</h3>
+                <p>Du Rap à la Damso .</p>
+                <div class="music-links">
+                    <a href="#"><i class="fa-brands fa-spotify"></i> Spotify</a>
+                    <a href="#"><i class="fa-solid fa-bolt"></i> Boomplay</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="bento-item games-card zoomable">
+            <img src="image/Jeux.jpg" alt="Gaming">
+            <div class="bento-overlay">
+                <span class="card-badge">Gaming</span>
+                <h3>Cloud & Compétition</h3>
+                <p>Passionné par les jeux de stratégie RP et De Foot.</p>
+            </div>
+        </article>
+
+        <article class="bento-item anime-card zoomable">
+            <video src="image/NARUTO.mp4" autoplay loop muted playsinline></video>
+            <div class="bento-overlay">
+                <span class="card-badge">Animé</span>
+                <h3>Culture Japonaise</h3>
+            </div>
+        </article>
+
+        <article class="bento-item sports-card zoomable">
+            <video src="image/FOOTBALL.mp4" autoplay loop muted playsinline></video>
+            <div class="bento-overlay">
+                <span class="card-badge">Lifestyle</span>
+                <h3>Football</h3>
+            </div>
+        </article>
+
+        <article class="bento-item car-card zoomable">
+            <img src="image/Cars.jpg" alt="Supercars">
+            <div class="bento-overlay">
+                <span class="card-badge">Moteur</span>
+                <h3>Design Automobile & Performance</h3>
+                <p>L'esthétique des courbes et la puissance des moteurs de demain.</p>
+            </div>
+        </article>
+    </section>
+
+    <div id="zoom-overlay" class="zoom-overlay"></div>
+</main>
     <footer>
         <p>&copy;2026 Ben. Tous droits réservés.</p>
         <a href=""><i class="fa-brands fa-github"></i></a>

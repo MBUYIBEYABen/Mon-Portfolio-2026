@@ -348,4 +348,349 @@ footer a:hover {
     }
 }
 
+main {
+    padding: 40px;
+    background: #f5f5f5;
+}
 
+main h1 {
+    text-align: center;
+    color: var(--violet-fonce);
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    position: relative;
+}
+
+main h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--violet-doux);
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+.ben {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carte {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+    display: flex;
+    transition: 0.3s ease;
+    overflow: hidden;
+    flex-direction: column;
+    height: 100%;
+}
+
+.carte:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.carte img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 4px solid var(--violet-doux);
+}
+
+.contenu {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 15px;
+    gap: 10px;
+}
+
+.contenu h3 {
+    margin: 10px 0;
+    color: var(--violet-fonce);
+}
+
+.contenu p {
+    font-size: 18px;
+    color: var(--gris-fonce);
+    margin-bottom: 5px;
+}
+
+.bouton{
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.bouton span {
+    display: inline-block;
+    background: var(--gris-tres-clair);
+    color: var(--violet-fonce);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.links {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--gris-clair);
+    padding: 12px 15px;
+}
+
+.links a {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--gris-tres-fonce);
+    font-size: 14px;
+}
+
+.links i {
+    margin-right: 5px;
+}
+
+.links a:hover {
+    color: var(--violet-doux);
+}
+
+
+
+/* --- CONTAINER ET HEADER --- */
+.divertissement-container {
+    padding: 60px 20px;
+    background: radial-gradient(circle at top right, rgba(108, 99, 255, 0.05), transparent);
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.header-section h1 span {
+    color: var(--violet-doux);
+    display: block;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 10px;
+}
+
+/* --- GRILLE BENTO AMÉLIORÉE --- */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 280px;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bento-item {
+    position: relative;
+    border-radius: 24px; /* Plus arrondi pour le look moderne */
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Effet de l'image */
+.bento-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8) contrast(1.1);
+    transition: transform 0.8s ease, filter 0.5s ease;
+}
+
+.bento-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.6);
+}
+
+/* Overlay Dégradé Premium */
+.bento-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 40%, transparent 100%);
+    color: white;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.bento-overlay h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 8px 0;
+}
+
+.card-badge {
+    align-self: flex-start;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* --- TAILLES ASYMÉTRIQUES --- */
+.music-card { grid-column: span 2; grid-row: span 2; } /* Grand bloc */
+.games-card { grid-column: span 2; grid-row: span 1; } /* Large */
+.anime-card { grid-column: span 1; grid-row: span 1; } /* Carré */
+.sports-card { grid-column: span 1; grid-row: span 1; } /* Carré */
+.car-card { grid-column: span 4; grid-row: span 1; }   /* Barre du bas */
+
+/* --- INTERACTS & BOUTONS --- */
+.music-links a {
+    background: var(--violet-doux);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 10px;
+}
+
+.music-links a:hover {
+    background: white;
+    color: var(--violet-doux);
+    transform: translateY(-3px);
+}
+
+/* --- EFFET ZOOM (JS requis, voir ma réponse précédente) --- */
+.zoom-active {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) scale(1.3) !important;
+    width: 500px !important;
+    height: 600px !important;
+    z-index: 1000;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 250px;
+    }
+    .music-card, .car-card { grid-column: span 2; }
+}
+
+
+
+/* --- PASSIONS : STYLE IDENTIQUE À DIVERTISSEMENT --- */
+.passions-container-bento {
+    padding: 60px 20px;
+    /* Même fond que divertissement */
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d1b4e 70%, #1a1a1a 100%);
+    min-height: 100vh;
+}
+
+/* --- NOUVELLE DISPOSITION DES BLOCS (Différente de Divertissement) --- */
+.bento-grid-passions {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 250px; /* Un peu plus court pour le dynamisme */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Bloc RAP : Prend toute la largeur des 3 premières colonnes en haut */
+.passion-rap {
+    grid-column: span 3;
+    grid-row: span 1;
+}
+
+/* Bloc FOOT : Prend les 2 dernières rangées de la 4ème colonne (Vertical à droite) */
+.passion-foot {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+/* Bloc CINÉ : En bas à gauche */
+.passion-cine {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+/* Bloc CUISINE : Au milieu en bas */
+.passion-cook {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+/* --- RÉGLAGES DES IMAGES ET OVERLAY (Identique Divertissement) --- */
+.passions-container-bento .bento-item {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.passions-container-bento .bento-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+    animation: smoothMove 20s ease-in-out infinite alternate;
+}
+
+.passions-container-bento .bento-overlay {
+    position: absolute;
+    inset: 0;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
+    color: white;
+}
+
+.card-badge.red {
+    background: #e62117;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: 0.7rem;
+    align-self: flex-start;
+    margin-bottom: 10px;
+}
+
+/* Responsive pour Passions */
+@media (max-width: 900px) {
+    .bento-grid-passions {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
+    }
+    .passion-rap, .passion-foot, .passion-cine, .passion-cook {
+        grid-column: span 2 !important;
+        grid-row: span 1 !important;
+    }
+}
